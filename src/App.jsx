@@ -27,7 +27,10 @@ function App() {
         flex justify-between items-center
         px-8 py-4 shadow
       ">
-        <h1 className="font-bold text-xl">Adriane's Portfolio</h1>
+        <a href="/" className="flex items-center gap-2">
+          <img src="/logo.svg" alt="Adriane Quiros Logo" className="h-10 w-auto" />
+          <span className="sr-only">Adriane Quiros Portfolio</span>
+        </a>
         <DarkModeToggle />
       </header>
 
