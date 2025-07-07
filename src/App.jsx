@@ -73,7 +73,7 @@ function App() {
               variants={container}
               className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
             >
-              {/* my-notes-app Card */}
+              {/* my-notes-app card */}
               <motion.div
                 variants={item}
                 whileHover={{ scale: 1.03, y: -5 }}
@@ -99,7 +99,7 @@ function App() {
                 </div>
               </motion.div>
 
-              {/* Example extra card */}
+              {/* log-analyzer card */}
               <motion.div
                 variants={item}
                 whileHover={{ scale: 1.03, y: -5 }}
@@ -115,9 +115,9 @@ function App() {
               >
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">Log Analyzer</h3>
-                  <p className="mb-4 text-brand-light/80 dark:text-brand-dark/80">React + Node.js log analyzer dashboard.</p>
+                  <p className="mb-4 text-brand-light/80 dark:text-brand-dark/80">Python Flask log analyzer dashboard.</p>
                   <a
-                    href="#"
+                    href="https://log-analyzer-enuz.onrender.com/"
                     className="font-semibold hover:underline"
                   >
                     View Project →
