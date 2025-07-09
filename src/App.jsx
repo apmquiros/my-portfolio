@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import DarkModeToggle from './DarkModeToggle';
+import ExperienceTimeline from './ExperienceTimeline';
 
 function App() {
 
@@ -71,7 +72,7 @@ function App() {
           >
             <motion.div
               variants={container}
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3  mx-auto"
             >
               {/* my-notes-app card */}
               <motion.div
@@ -125,19 +126,50 @@ function App() {
                 </div>
               </motion.div>
 
+              {/* homepage prototype */}
+              <motion.div
+                variants={item}
+                whileHover={{ scale: 1.03, y: -5 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                className="
+                  bg-brand-dark text-brand-light
+                  dark:bg-brand-light/80 dark:text-brand-dark
+                  rounded-xl 
+                  shadow-md dark:shadow-none 
+                  dark:drop-shadow-[0_0_8px_rgba(249,249,249,0.1)]
+                  transition-shadow duration-300
+                "
+              >
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2">Homepage Prototype</h3>
+                  <p className="mb-4 text-brand-light/80 dark:text-brand-dark/80">React homepage prototype for job assessment.</p>
+                  <a
+                    href="https://apmquiros.github.io/feeldx-homepage/"
+                    className="font-semibold hover:underline"
+                  >
+                    View Project →
+                  </a>
+                </div>
+              </motion.div>
+
             </motion.div>
           </motion.section>
         </section>
 
         {/* About Me Section */}
-        <section className="py-20 bg-brand-light dark:bg-brand-dark text-brand-dark dark:text-brand-light text-center px-4">
+        <section className="py-20 bg-brand-darker dark:bg-brand-accent text-brand-light dark:text-brand-light text-center px-4">
           <h2 className="text-3xl font-bold mb-4 text-brand-highlight">About Me</h2>
           <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          >Detail-oriented junior dev with a background in full-stack dev & cybersecurity.</motion.p>
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            Detail-oriented junior dev with a background in full-stack development and learning cybersecurity.
+          </motion.p>
+
+          <ExperienceTimeline />
         </section>
 
         {/* Contact Section */}
@@ -158,7 +190,7 @@ function App() {
           
         </section>
 
-        <footer className="py-6 text-center text-sm text-brand-dark dark:text-brand-light/60">
+        <footer className="py-6 text-center text-sm bg-brand-darker dark:bg-brand-accent text-brand-light dark:text-brand-light">
           &copy; 2025 Adriane Patrick Quiros
         </footer>
       </div>
